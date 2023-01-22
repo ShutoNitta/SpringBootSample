@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+<head>
+<title>給与の追加</title>
+<link rel="stylesheet" th:href="@{/css/user/list.css}">
+<script th:src="@{/js/user/addSalary.js}" defer></script>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="header border-bottom">
+			<h1 class="h2">給与追加</h1>
+		</div>
+		<div class="mb-4">
+			<form id="salary-form" th:action="@{/addSalary}" class="form-inline"
+				th:object="${salaryForm}" method="post">
+				<div class="form-group">
+					<label for="userId" class="mr-2">ユーザーID</label> 
+					<input type="text" class="form-control" th:field="*{userId}" /> 
+					<label for="salary" class="mr-2">金額</label> 
+					<input type="text" class="form-control" th:field="*{salary}" /> 
+					<label for="year" class="mr-2">年</label>
+					<input type="text" class="form-control" th:field="*{year}" /> 
+					<label for="month" class="mr-2">月</label>
+					<input type="text" class="form-control" th:field="*{month}" />
+				</div>
+				<div>
+					<button id="btn-salaryInsert" class="btn btn-primary ml-3"
+						type="button">追加</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
