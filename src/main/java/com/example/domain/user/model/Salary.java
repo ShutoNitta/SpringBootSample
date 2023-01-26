@@ -10,11 +10,13 @@ import lombok.Data;
 @Entity
 @Table(name="t_salary")
 public class Salary {
-	
+
 	@EmbeddedId
 	private SalaryKey salaryKey;
 	private Integer salary;
-	
+
+	public Salary() {};
+
 	public Salary (SalaryKey salaryKey, Integer salary) {
 		this.setSalaryKey(salaryKey);
 		this.setSalary(salary);

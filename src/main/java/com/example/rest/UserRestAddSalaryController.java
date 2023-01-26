@@ -32,6 +32,8 @@ public class UserRestAddSalaryController {
 
 		if(bindingResult.hasErrors()) {
 			Map<String, String> errors = new HashMap<>();
+			
+			System.out.println("point1");
 
 			for(FieldError error: bindingResult.getFieldErrors()) {
 				String message = messageSource.getMessage(error, locale);
@@ -41,15 +43,14 @@ public class UserRestAddSalaryController {
 			return new RestResult(90, errors);
 		}
 		
-		String yearMonth = form.getYear() + "/" + form.getMonth();
-		String userId = form.getUserId();
+		String yearMonth = (String)form.getYear() + "/" + (String)form.getMonth();
+		String userId = (String)form.getUserId();
 		SalaryKey salaryKey = new SalaryKey(userId,yearMonth);
 		Integer salaryValue = (Integer)form.getSalary();
 		Salary salary = new Salary(salaryKey,salaryValue);
 		
-		
+		System.out.println("point2");
 		userService.insertSalaryOne(salary);
-		int i = 1;
 		return new RestResult(90, null);
 		
 	}
