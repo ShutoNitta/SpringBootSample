@@ -49,8 +49,9 @@ public class UserRestAddSalaryController {
 		
 		
 		userService.insertSalaryOne(salary);
-		
+		int i = 1;
 		return new RestResult(90, null);
+		
 	}
 
 }
