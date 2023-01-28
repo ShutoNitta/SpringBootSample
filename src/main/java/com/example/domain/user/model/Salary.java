@@ -16,7 +16,7 @@ public class Salary {
 	private Integer salary;
 
 	public Salary() {};
-
+	
 	public Salary (SalaryKey salaryKey, Integer salary) {
 		this.setSalaryKey(salaryKey);
 		this.setSalary(salary);
