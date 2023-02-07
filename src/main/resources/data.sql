@@ -9,11 +9,13 @@ INSERT INTO m_user (
   , birthday
   , age
   , gender
+  , address
+  , telephone_number
   , department_id
   , role
 ) VALUES
-('system@co.jp', '$2a$10$gzUbSxiL1zC4JIGeyJdowOn8g.GLkxvH8y1malGhm.0bmEtqmkkwW', 'システム管理者', '2000-01-01', 21, 1, 1, 'ROLE_ADMIN')
-, ('user@co.jp', '$2a$10$gzUbSxiL1zC4JIGeyJdowOn8g.GLkxvH8y1malGhm.0bmEtqmkkwW', 'ユーザー1', '2000-01-01', 21, 2, 2, 'ROLE_GENERAL')
+('system@co.jp', '$2a$10$gzUbSxiL1zC4JIGeyJdowOn8g.GLkxvH8y1malGhm.0bmEtqmkkwW', 'システム管理者', '2000-01-01', 21, 1, '東京都港区芝公園４丁目２−８','08011112222',1, 'ROLE_ADMIN')
+, ('user@co.jp', '$2a$10$gzUbSxiL1zC4JIGeyJdowOn8g.GLkxvH8y1malGhm.0bmEtqmkkwW', 'ユーザー1', '2000-01-01', 21, 2,'東京都墨田区押上１丁目１−２','09033334444' ,2, 'ROLE_GENERAL')
 ;
 
 /* 部署マスタ */

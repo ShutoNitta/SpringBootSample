@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS m_user (
   , birthday DATE
   , age INT
   , gender INT
+  , address VARCHAR(100)
+  , telephone_number VARCHAR(15)
   , department_id INT
   , role VARCHAR(50)
 );

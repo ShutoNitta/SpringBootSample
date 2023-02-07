@@ -39,4 +39,12 @@ public class SignupForm {
 
     @NotNull(groups = ValidGroup1.class)
     private Integer gender;
+    
+    @NotBlank(groups = ValidGroup1.class)
+    private String address;
+    
+    @NotNull(groups = ValidGroup1.class)
+    @Length(min = 11, max = 12, groups = ValidGroup2.class)
+    @Pattern(regexp = "^[0-9]+$", groups = ValidGroup2.class)
+    private String telephoneNumber;
 }

@@ -54,7 +54,7 @@ public class SignupController {
     /** ユーザー登録処理 */
     @PostMapping("/signup")
     public String postSignup(Model model, Locale locale,
-            @ModelAttribute @Validated(GroupOrder.class) SignupForm form,
+            @ModelAttribute @Validated(GroupOrder.class)SignupForm form,
             BindingResult bindingResult) {
 
         // 入力チェック結果
