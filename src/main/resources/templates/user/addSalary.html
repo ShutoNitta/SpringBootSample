@@ -12,25 +12,36 @@
 		<div class="header border-bottom">
 			<h1 class="h2">給与追加</h1>
 		</div>
-		<div class="mb-4">
-			<form id="salary-form" th:action="@{/addSalary}" class="form-inline"
-				th:object="${salaryForm}" method="post">
-				<div class="form-group">
-					<label for="userId" class="mr-2">ユーザーID</label> 
-					<input type="text" class="form-control" th:field="*{userId}" /> 
-					<label for="salary" class="mr-2">金額</label> 
-					<input type="text" class="form-control" th:field="*{salary}" /> 
-					<label for="year" class="mr-2">年</label>
-					<input type="text" class="form-control" th:field="*{year}" /> 
-					<label for="month" class="mr-2">月</label>
-					<input type="text" class="form-control" th:field="*{month}" />
-				</div>
-				<div>
-					<button id="btn-salaryInsert" class="btn btn-primary ml-3"
-						type="button">追加</button>
-				</div>
-			</form>
-		</div>
+		<form id="salary-form" th:action="@{/addSalary}" class="form-group"
+			th:object="${salaryForm}" method="post">
+			<table class="table table-striped table-bordered mr-sm-4">
+				<tbody>
+					<tr>
+						<th class="text-center">ユーザーID</th>
+						<td><input type="text" class="form-control"
+							th:field="*{userId}" /></td>
+					</tr>
+					<tr>
+						<th class="text-center">金額</th>
+						<td><input type="text" class="form-control"
+							th:field="*{salary}" /></td>
+					</tr>
+					<tr>
+						<th class="text-center">年</th>
+						<td><input type="text" class="form-control"
+							th:field="*{year}" /></td>
+					</tr>
+					<tr>
+						<th class="text-center">月</th>
+						<td><input type="text" class="form-control"
+							th:field="*{month}" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="text-center">
+				<button id="btn-salaryInsert" class="btn btn-primary" type="button">追加</button>
+			</div>
+		</form>
 	</div>
 </body>
 </html>
