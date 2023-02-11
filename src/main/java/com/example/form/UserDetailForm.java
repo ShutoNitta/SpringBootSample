@@ -17,5 +17,7 @@ public class UserDetailForm {
     private Integer age;
     private Integer gender;
     private Department department;
+    private String telephoneNumber;
+    private String address;
     private List<Salary> salaryList;
 }
